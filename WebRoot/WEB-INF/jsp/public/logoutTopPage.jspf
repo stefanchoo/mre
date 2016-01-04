@@ -1,0 +1,10 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!-- 首页 -->
+<div id="topPage" class="topPage">
+  <div class="topDiv">
+    <div> <img src="${pageContext.request.contextPath}/style/images/logo.png" class="logo"/> </div>
+    <div class="slogan">康复设备医疗网络平台，与您携手共度康复生活</div>
+    <div class="login"> <s:a action="user_loginUI">登录</s:a> | <s:a action="user_registerUI">注册</s:a> </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+.search { width: 500px; height: 120px; margin: auto; float: left; }
+.quickStart { margin: 20px 50px auto auto; width: 80px; height: 80px; background: url(../images/clickme.gif) no-repeat; background-position: center; cursor: pointer; position: relative; float: right; }
+.topSearch { width: 500px; height: 45px; float: left; }
+.search_blank_h10 { width: 500px; height: 10px; }
+.search_blank_h15 { width: 500px; height: 15px; }
+.search_blank_h35 { width: 500px; height: 30px; }
+.searchType { width: 500px; height: 30px; }
+.searchType li { cursor: pointer; width: 90px; height: 30px; line-height: 30px; font-size: 16px; text-align: center; float: left; }
+.searchTypeChecked { color: #FFF; background-color: #0c3; }
+.bottomSearch { width: 400px; height: 75px; float: left; }
+.searchBox { width: 400px; height: 28px; border: 2px solid #0C3; }
+.searchInput { width: 340px; height: 28px; border-style: none; float: left; }
+.searchButton { padding: 0; width: 60px; height: 28px; border-style: none; float: right; }
+
+/* 医生导航 */
+.doctorCenterNavi { width:700px; height: 50px; float: left;  margin: 35px 0px; background:#0B0; font-size:20px; font-family:"微软雅黑"; border-radius:5px;}
+.doctorCenterNavi ul li {display:block; width:175px; height:50px; line-height:50px; text-align:center; float:left;}
+.doctorCenterNavi ul li a {text-decoration: none; color:#FFF;}
+.doctorCenterNavi ul li a:hover {text-decoration: none; color:#FFF;} 
+
+.naviPicPage { width: 1109px; height: 390px; clear: both; }
+.navigationDiv { width: 1109px; height: 50px; border-radius: 5px; background: url(../images/naviMenu_bg.gif) repeat-x; }
+.navi_first { height: 50px; list-style: none; }
+.navi_first li { padding: 0; width: 180px; height: 50px; text-align: center; line-height: 50px; float: left; }
+.navi_first li a { font-size: 20px; font-weight: bold; color: #FFF; text-decoration: none; }
+.navi_second { display: none; padding: 0px; width: 185px; height: 150px; opacity: 0.8; list-style: none; }
+.navi_second li { padding-left: 40px; width: 140px; height: 30px; text-align: left; line-height: 30px; background-color: #3dab3f; float: left; }
+.navi_second li a { font-size: 12px; color: #FFF; text-decoration: none; }
+.navi_second li a:hover { color: #333; text-decoration: underline; }
+
+.picDiv { margin-top: 8px; width: 1109px; height: 330px; }
+.picWall { width: 650px; height: 330px; background: url(../images/showImgs/armeo.jpg) no-repeat; background-position: center; border: 1px solid #CCC; float: left; cursor: pointer; }
+.pic_blank_h150 { width: 650px; height: 150px; float: left; }
+.arrows { width: 650px; height: 30px; float: left; }
+.arrows_pre { width: 30px; height: 30px; border-radius: 15px; background: url(../images/arrows.png) no-repeat; background-color: #333; background-position: left; opacity: 0.7; visibility: hidden; cursor: pointer; float: left; }
+.arrows_blank_w580 { width: 580px; height: 30px; float: left; }
+.arrows_pos { width: 30px; height: 30px; border-radius: 15px; background: url(../images/arrows.png) no-repeat; background-color: #333; opacity: 0.7; background-position: right; visibility: hidden; cursor: pointer; float: right; }
+.picDesc { width: 430px; height: 330px; border: 1px solid #CCC; float: right; }
+.name { font-size: 20px; font-weight: bold; text-align: center; }
+.content { padding: 2px; text-indent: 2em; font-size: 14px; }
+
+.mainPage { margin: 18px auto; width: 1109px; height: 1500px; clear: both; }
+.leftPage { width: 650px; height: 1500px; float: left; }
+.rightPage { width: 434px; height: 1500px; float: right; }
+.leftPageTemplate { margin: 5px 0px; width: 650px; height: 490px; background: url(../images/title_bg.gif) repeat-x; float: left; }
+.rightPageTemplate_01 { margin: 5px 0px; width: 434px; height: 610px; background: url(../images/kfpd_bg.gif) no-repeat; border: 1px solid #CCC; float: right; }
+.rightPageTemplate_02 { margin: 5px 0px; width: 434px; height: 610px; border: 1px solid #CCC; background: url(../images/kflt_bg.gif) no-repeat; float: right; }
+.contactus { margin: 5px 0px; width: 434px; height: 240px; border: 1px solid #CCC; background: url(../images/lxwm_bg.gif) no-repeat; float: right; }
+.mainTitle { height: 35px; width: 610px; padding-left: 40px; font-size: 20px; font-weight: bold; color: #090; line-height: 35px; float: left; }
+.mainContent { height: 450px; width: 648px; border: 1px solid #CCC; float: left; }
+.mainContentItems { height: 90px; width: 648px; float: left; }
+.mainContentItemsType { padding: 0px; height: 90px; width: 150px; float: left; }
+.mainContentItemsType a { padding-left: 20px; line-height: 90px; font-size: 20px; color: #333; font-weight: bold; text-decoration: none; }
+.mainContentItemsType a:hover { text-decoration: underline; }
+.mainContentItemsName { padding: 0px; height: 90px; width: 430px; font-size: 20px; float: left; }
+.mainContentItemsName div { height: 45px; width: 143px; line-height: 45px; font-size: 14px; float: left; }
+.more { padding: 0px; height: 90px; width: 68px; font-size: 14px; float: left; }
+.more a { line-height: 140px; color: #09C; text-decoration: none; }
+.more a:hover { text-decoration: underline; }
+.mainContentExpert { height: 150px; width: 648px; }
+.expertPhoto { height: 150px; width: 150px; float: left; }
+.expertInfo { height: 150px; width: 410px; float: left; }
+.expertInfoTemplate { padding-left: 2px; font-size: 14px; line-height: 50px; height: 50px; width: 430px; float: left; }
+.expertInfoTemplate span { font-size: 18px; font-weight: bold; }
+
+.right_blank_h40 { width: 434px; height: 40px; border-bottom: 1px solid #CCC; }
+.right_blank_h200 { width: 434px; height: 200px; }
+.assessmentList { height: 570px; width: 434px; padding-top: 15px; }
+.assessmentList li { padding-left: 35px; height: 30px; font-size: 14px; background: url(../images/ass_bg.gif) no-repeat; }
+.usInfo { width: 234px; height: 200px; font-size: 18px; float: left; }
+.usName { width: 234px; height: 66px; line-height: 66px; }
+.usEmail { width: 234px; height: 66px; line-height: 66px; }
+.usTalk { width: 234px; height: 66px; text-align: center; }
+.usTalk div { margin: 15px auto; width: 150px; height: 35px; background-color: #0C0; border-radius: 5px; font-size: 18px; line-height: 35px; color: #FFF; cursor: pointer; }
+.weixinQR { width: 200px; height: 200px; line-height: 70px; text-align: center; background: url(../images/weixinQR.png) no-repeat; background-position: center; float: right; }

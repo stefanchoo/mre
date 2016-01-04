@@ -1,0 +1,26 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<div class="cent_patientsPage">
+	<div
+		style="font-size:18px; float:left; width:100px; height:28px; line-height:28px;">患者列表</div>
+	<div class="cent_SearchBox">
+		<s:form action="centrobot_%{#target == 'planContent'? 'makePlansUI' : 'patientsList'}" method="post">
+			<s:hidden name="opr" value="searchPatient" />
+			<s:hidden name="equipmentId" />
+			<s:textfield type="text" name="patientName"
+				cssClass="cent_searchInput" placeholder="请输入患者姓名" />
+			<input type="image"
+				src="${pageContext.request.contextPath}/style/images/button/searchBtn_01.gif" />
+		</s:form>
+	</div>
+	<div class="iframeBox300">
+		<s:if test="%{#model != null}">
+			<iframe frameborder="0" height="100%" width="100%" scrolling="auto"
+				src="http://www.nofate.net.cn/mre/centrobot_cent_patientsList.action?patientId=${model.rehabPlan.patient.id}&target=${target}"></iframe>
+		</s:if>
+		<s:else>
+			<iframe frameborder="0" height="100%" width="100%" scrolling="auto"
+				src="http://www.nofate.net.cn/mre/centrobot_cent_patientsList.action?patientId=${searchPatientId}&target=${target}"></iframe>
+		</s:else>
+	</div>
+</div>

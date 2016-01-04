@@ -1,0 +1,43 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- BannerPage -->
+<div class="centrobotBannerPage">
+    <div class="centrobotLogo"> <img src="${pageContext.request.contextPath}/style/images/centrobot/logo.png" width="250px" height="80px"/></div>
+    <!--  -->
+    <div class="centrobotNavi">
+    	<s:if test="%{#session.saveBean.discriminator == 'doctor'}">
+    	<ul id="firstNavi">
+        	<li id="cent_index" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_index.action?opr=docOpr&equipmentId=${equipmentId}';">首 页</li>
+            <li id="cent_patientsList" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_patientsList.action?opr=docOpr&equipmentId=${equipmentId}';">患者列表</li>
+            <li id="cent_makePlans" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_makePlansUI.action?opr=docOpr&equipmentId=${equipmentId}';">计划定制</li>
+            <li id="cent_rehabTraining" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_rehabTrainingUI.action?opr=docOpr&equipmentId=${equipmentId}';">康复训练
+            	<ul id="secondNavi">
+                <li>运动训练</li>
+                <li>游戏训练</li>
+                </ul>
+            </li>
+            <li id="cent_equipmentCheck" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_equipmentCheckUI.action?opr=docOpr&equipmentId=${equipmentId}';">设备调试</li>
+            <li id="cent_help" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_helpPage.action?opr=docOpr&equipmentId=${equipmentId}';">使用帮助</li>         
+        </ul>
+        </s:if>
+        <s:else>
+        	<ul id="firstNavi">
+        	<li id="cent_index" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_index.action?opr=theOpr&equipmentId=${equipmentId}';">首 页</li>
+            <li id="cent_patientsList" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_patientsList.action?opr=theOpr&equipmentId=${equipmentId}';">患者列表</li>
+            <li id="cent_makePlans" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_makePlansUI.action?opr=theOpr&equipmentId=${equipmentId}';">计划定制</li>
+            <li id="cent_rehabTraining" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_rehabTrainingUI.action?opr=theOpr&equipmentId=${equipmentId}';">康复训练
+            	<ul id="secondNavi">
+                <li>运动训练</li>
+                <li>游戏训练</li>
+                </ul>
+            </li>
+            <li id="cent_equipmentCheck" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_equipmentCheckUI.action?opr=theOpr&equipmentId=${equipmentId}';">设备调试</li>
+            <li id="cent_help" onclick="javascript: window.location.href='http://www.nofate.net.cn/mre/centrobot_helpPage.action?opr=theOpr&equipmentId=${equipmentId}';">使用帮助</li>         
+        </ul>
+        </s:else>
+    </div>
+    <div class="centrobotStatus">
+    	<div class="blank_h40">连接状态</div>
+        <div class="blank_h40"><img id="centrobotConnect" title="点击连接" style="cursor:pointer;" src="${pageContext.request.contextPath}/style/images/centrobot/off.jpg" width="65px" height="39px"/></div>
+    </div>
+</div>

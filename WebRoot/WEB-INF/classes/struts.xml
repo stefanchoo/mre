@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 把扩展名配置为action -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 配置主体为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 将对象交给spring管理 struts-spring-plugin已经实现关联 -->
+	<!-- <constant name="struts.objectFactory" value="spring"/> -->
+		
+	<!-- 该包继承与json-default, 而json-default 又继承于struts-default -->
+	<package name="default" namespace="/json" extends="json-default">
+		<!-- 配置测试用的action 测试struts2，未与Spring整合，class写类的全名 -->
+		<!-- 处理微信模块的action -->
+		<action name="wechat_*" class="wechatAction" method="{1}">
+			<result type="json">
+				<param name="root">returnData</param>
+			</result>
+		</action>
+		
+		<action name="device_*" class="deviceAction" method="{1}">
+			<result type="json">
+				<param name="root">serverData</param>
+			</result>
+		</action>
+		
+	</package>
+
+
+	<!-- 处理设备数据的包 -->
+	<package name="ajax" namespace="/dev" extends="json-default">
+		<interceptors>
+			<!-- 声明检查权限的拦截器 -->
+			<interceptor name="checkPrivilege"
+				class="com.mre.privilege.CheckPrivilegeInterceptor">
+			</interceptor>
+
+			<!-- 如果是想要定义自己的拦截器栈，则还需要进行声明
+			重新定义默认的拦截器栈 成为拦截链，对整个Action有效，也可以建立只对某个方有效的拦截器 -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="checkPrivilege"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 处理设备发送过来数据的action -->
+		<action name="centrobotData_*" class="centrobotDataAction" method="{1}">
+			<result type="json">
+				<param name="root">serverData</param>
+			</result>
+		</action>
+	</package>
+
+
+
+	<!-- Add packages here -->
+	<package name="mre" namespace="/" extends="struts-default">
+		<interceptors>
+			<!-- 声明检查权限的拦截器 -->
+			<interceptor name="checkPrivilege"
+				class="com.mre.privilege.CheckPrivilegeInterceptor">
+			</interceptor>
+
+			<!-- 如果是想要定义自己的拦截器栈，则还需要进行声明 -->
+			<!-- 重新定义默认的拦截器栈 成为拦截链，对整个Action有效，也可以建立只对某个方有效的拦截器 -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="checkPrivilege"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<global-results>
+			<result name="toIndex" type="redirectAction">user_index</result>
+			<result name="toPatientCenter" type="redirectAction">patient_center</result>
+			<result name="toDoctorCenter" type="redirectAction">doctor_center</result>
+			<result name="toTherapistCenter" type="redirectAction">therapist_center</result>
+			<result name="toPatient_receiveBoxList" type="redirectAction">patient_receiveBoxList</result>
+			<result name="toDoctor_receiveBoxList" type="redirectAction">doctor_receiveBoxList</result>
+			<result name="toTherapist_receiveBoxList" type="redirectAction">therapist_receiveBoxList</result>
+			<result name="loginError">loginError.jsp</result>
+			<result name="noPrivilegeError">noPrivilegeError.jsp</result>
+			<result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+			<result name="noResult">noResult.jsp</result>
+			<result name="noRehabPlanResult">noRehabPlanResult.jsp</result>
+			<result name="noReportResult">noReportResult.jsp</result>
+		</global-results>
+
+		<!-- 用户登录管理模块 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+			<result name="registerUI">/WEB-INF/jsp/userAction/registerUI.jsp</result>
+			<result name="index">index.jsp</result>
+		</action>
+
+		<!-- 患者中心模块 -->
+		<action name="patient_*" class="patientAction" method="{1}">
+			<result name="patientCenter">/WEB-INF/jsp/patientAction/patientCenter.jsp
+			</result>
+			<result name="basicInfoUI">/WEB-INF/jsp/patientAction/personalInfo.jsp
+			</result>
+			<result name="changePasswordUI">/WEB-INF/jsp/patientAction/changePassword.jsp
+			</result>
+			<result name="creditsManageUI">/WEB-INF/jsp/patientAction/creditsManagement.jsp
+			</result>
+			<result name="messageSetupUI">/WEB-INF/jsp/patientAction/messageSetup.jsp
+			</result>
+			<result name="myDoctorUI">/WEB-INF/jsp/patientAction/myDoctor.jsp
+			</result>
+			<result name="myMedicalRecordUI">/WEB-INF/jsp/patientAction/myMedicalRecord.jsp
+			</result>
+			<result name="myHealthInsuranceUI">/WEB-INF/jsp/patientAction/myHealthInsurance.jsp
+			</result>
+			<result name="rehabExperienceList">/WEB-INF/jsp/patientAction/rehabExperienceList.jsp
+			</result>
+			<result name="addRehabExperienceUI">/WEB-INF/jsp/patientAction/addRehabExperienceUI.jsp
+			</result>
+			<result name="rehabExperienceShowUI">/WEB-INF/jsp/patientAction/rehabExperienceShowUI.jsp
+			</result>
+			<result name="todayRehabPlanUI">/WEB-INF/jsp/patientAction/todayRehabPlan.jsp
+			</result>
+			<result name="completedRehabPlansList">/WEB-INF/jsp/patientAction/completedRehabPlanList.jsp
+			</result>
+			<result name="notCompletedRehabPlansList">/WEB-INF/jsp/patientAction/notCompletedRehabPlanList.jsp
+			</result>
+			<result name="sendBoxList">/WEB-INF/jsp/patientAction/sendBoxList.jsp
+			</result>
+			<result name="receiveBoxList">/WEB-INF/jsp/patientAction/receiveBoxList.jsp
+			</result>
+			<result name="sendMessageUI">/WEB-INF/jsp/patientAction/sendMessageUI.jsp
+			</result>
+			<result name="sendMessageShowUI">/WEB-INF/jsp/patientAction/sendMessageShowUI.jsp
+			</result>
+			<result name="receiveMessageShowUI">/WEB-INF/jsp/patientAction/receiveMessageShowUI.jsp
+			</result>
+
+			<result name="toBasicInfoUI" type="redirectAction">patient_basicInfoUI</result>
+			<result name="toMessageSetupUI" type="redirectAction">patient_messageSetupUI
+			</result>
+			<result name="toRehabExperienceList" type="redirectAction">patient_rehabExperienceList
+			</result>
+			<result name="toSendBoxList" type="redirectAction">patient_sendBoxList</result>
+			<result name="toReceiveBoxList" type="redirectAction">patient_receiveBoxList
+			</result>
+		</action>
+
+		<!-- 医生中心模块 -->
+		<action name="doctor_*" class="doctorAction" method="{1}">
+			<result name="doctorCenter">/WEB-INF/jsp/doctorAction/doctorCenter.jsp
+			</result>
+			<result name="basicInfoUI">/WEB-INF/jsp/doctorAction/personalInfo.jsp
+			</result>
+			<result name="changePasswordUI">/WEB-INF/jsp/doctorAction/changePassword.jsp
+			</result>
+			<result name="creditsManageUI">/WEB-INF/jsp/doctorAction/creditsManagement.jsp
+			</result>
+			<result name="messageSetupUI">/WEB-INF/jsp/doctorAction/messageSetup.jsp
+			</result>
+			<result name="patientsList">/WEB-INF/jsp/doctorAction/patientsList.jsp
+			</result>
+			<result name="addPatientUI">/WEB-INF/jsp/doctorAction/addPatient.jsp</result>
+			<result name="patientShowUI">/WEB-INF/jsp/doctorAction/patientShow.jsp
+			</result>
+			<result name="rehabPlansList">/WEB-INF/jsp/doctorAction/rehabPlansList.jsp
+			</result>
+			<result name="rehabPlanShowUI">/WEB-INF/jsp/doctorAction/rehabPlanShow.jsp
+			</result>
+			<result name="addRehabPlanUI">/WEB-INF/jsp/doctorAction/addRehabPlan.jsp
+			</result>
+			<result name="todayRehabPlanUI">/WEB-INF/jsp/doctorAction/todayRehabPlan.jsp
+			</result>
+			<result name="equipmentsList">/WEB-INF/jsp/doctorAction/equipmentsList.jsp
+			</result>
+			<result name="sendBoxList">/WEB-INF/jsp/doctorAction/sendBoxList.jsp
+			</result>
+			<result name="receiveBoxList">/WEB-INF/jsp/doctorAction/receiveBoxList.jsp
+			</result>
+			<result name="sendMessageUI">/WEB-INF/jsp/doctorAction/sendMessageUI.jsp
+			</result>
+			<result name="sendMessageShowUI">/WEB-INF/jsp/doctorAction/sendMessageShowUI.jsp
+			</result>
+			<result name="receiveMessageShowUI">/WEB-INF/jsp/doctorAction/receiveMessageShowUI.jsp
+			</result>
+
+			<result name="toBasicInfoUI" type="redirectAction">doctor_basicInfoUI</result>
+			<result name="toMessageSetupUI" type="redirectAction">doctor_messageSetupUI
+			</result>
+			<result name="toPatientsList" type="redirectAction">doctor_patientsList
+			</result>
+			<result name="toRehabPlansList" type="redirectAction">doctor_rehabPlansList
+			</result>
+			<result name="toRehabPlanShowUI" type="redirectAction">doctor_rehabPlanShowUI?rehabPlan.id=${rehabPlan.id}
+			</result>
+			<result name="toSendBoxList" type="redirectAction">doctor_sendBoxList</result>
+			<result name="toReceiveBoxList" type="redirectAction">doctor_receiveBoxList
+			</result>
+
+			<result name="toCentrobot_index" type="redirectAction">centrobot_index?equipmentId=${equipment.id}
+			</result>
+			<result name="toCentrobot_makePlansUI" type="redirectAction">centrobot_makePlansUI?opr=fromDoc&amp;rehabPlanId=${rehabPlan.id}
+			</result>
+		</action>
+
+		<!-- 治疗师中心模块 -->
+		<action name="therapist_*" class="therapistAction" method="{1}">
+			<result name="therapistCenter">/WEB-INF/jsp/therapistAction/therapistCenter.jsp</result>
+			<result name="basicInfoUI">/WEB-INF/jsp/therapistAction/personalInfo.jsp</result>
+			<result name="changePasswordUI">/WEB-INF/jsp/therapistAction/changePassword.jsp</result>
+			<result name="creditsManageUI">/WEB-INF/jsp/therapistAction/creditsManagement.jsp</result>
+			<result name="messageSetupUI">/WEB-INF/jsp/therapistAction/messageSetup.jsp</result>
+			<result name="equipmentsList">/WEB-INF/jsp/therapistAction/equipmentsList.jsp</result>
+			<result name="equipmentShowUI">/WEB-INF/jsp/therapistAction/equipmentShow.jsp</result>
+			<result name="todayRehabPlanUI">/WEB-INF/jsp/therapistAction/todayRehabPlan.jsp</result>
+			<result name="sendBoxList">/WEB-INF/jsp/therapistAction/sendBoxList.jsp</result>
+			<result name="receiveBoxList">/WEB-INF/jsp/therapistAction/receiveBoxList.jsp</result>
+			<result name="sendMessageUI">/WEB-INF/jsp/therapistAction/sendMessageUI.jsp</result>
+			<result name="sendMessageShowUI">/WEB-INF/jsp/therapistAction/sendMessageShowUI.jsp</result>
+			<result name="receiveMessageShowUI">/WEB-INF/jsp/therapistAction/receiveMessageShowUI.jsp</result>
+			<result name="toBasicInfoUI" type="redirectAction">therapist_basicInfoUI</result>
+			<result name="toMessageSetupUI" type="redirectAction">therapist_messageSetupUI</result>
+			<result name="toSendBoxList" type="redirectAction">therapist_sendBoxList</result>
+			<result name="toReceiveBoxList" type="redirectAction">therapist_receiveBoxList</result>
+			<result name="toCentrobot_index" type="redirectAction">centrobot_index?equipmentId=${equipment.id}
+			</result>
+		</action>
+
+		<!-- centrobot管理模块 -->
+		<action name="centrobot_*" class="centrobotAction" method="{1}">
+			<result name="index">/WEB-INF/jsp/centrobotAction/index.jsp</result>
+			<result name="patientsList">/WEB-INF/jsp/centrobotAction/patientsList.jsp
+			</result>
+			<result name="makePlansUI">/WEB-INF/jsp/centrobotAction/makePlansUI.jsp
+			</result>
+			<result name="rehabTrainingUI">/WEB-INF/jsp/centrobotAction/rehabTrainingUI.jsp
+			</result>
+			<result name="equipmentCheckUI">/WEB-INF/jsp/centrobotAction/equipmentCheck.jsp
+			</result>
+			<result name="helpPage">/WEB-INF/jsp/centrobotAction/helpPage.jsp
+			</result>
+
+			<!-- iframe -->
+			<result name="cent_patientsList">/WEB-INF/jsp/centrobotAction/cent_patientsList.jsp
+			</result>
+			<result name="cent_planContent">/WEB-INF/jsp/centrobotAction/cent_planContent.jsp
+			</result>
+			<result name="cent_patientReport">/WEB-INF/jsp/centrobotAction/cent_patientReport.jsp
+			</result>
+			<result name="cent_patientsRehabList">/WEB-INF/jsp/centrobotAction/cent_patientsRehabList.jsp</result>
+			<result name="cent_commandArea">/WEB-INF/jsp/centrobotAction/cent_commandArea.jsp</result>
+			<result name="graphShow">/WEB-INF/jsp/centrobotAction/cent_graphShow.jsp</result>
+			
+			<!-- 逻辑处理模块 -->
+			<result name="toRehabPlanContent" type="redirectAction">centrobot_cent_planContent?patientId=${patientId}&amp;id=${id}
+			</result>
+		</action>
+	</package>
+</struts>

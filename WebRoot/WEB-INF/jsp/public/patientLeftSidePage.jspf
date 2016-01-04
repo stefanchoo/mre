@@ -1,0 +1,76 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<div class="leftSideTemplate">
+				<div class="leftSide">
+					<div class="myCenterTitle"
+						onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/user_center.action';">我
+						的 中 心</div>
+					<div class="myCenterContent">
+						<ul>
+							<li class="titleLi"><img
+								src="${pageContext.request.contextPath}/style/images/patientCenterBgs/user.png"
+								style="opacity:0.8;" /><span> 我的账户</span>
+								<div class="foldBtn1" title="点击展开收缩"></div>
+								<ul>
+									<li id="patientInfo"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_basicInfoUI.action';">个人资料</li>
+									<li id="creditsManagement"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_creditsManageUI.action';">积分管理</li>
+									<li id="changePassword"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_changePasswordUI.action';">修改密码</li>
+									<li id="messageSetup"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_messageSetupUI.action';">短信通知设置</li>
+								</ul></li>
+							<li class="titleLi"><img
+								src="${pageContext.request.contextPath}/style/images/patientCenterBgs/patientdata.png" /><span>
+									医疗状况</span>
+								<div class="foldBtn2" title="点击展开收缩"></div>
+								<ul>
+									<li id="myMedicalRecord"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_myMedicalRecordUI.action';">我的病历</li>
+									<li id="myDoctor"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_myDoctorUI.action';">我的医生</li>
+									<li id="myHealthInsurance"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_myHealthInsuranceUI.action';">我的医保</li>
+									<li id="rehabExperience"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_rehabExperienceList.action';">康复经验</li>
+
+								</ul></li>
+							<li class="titleLi"><img
+								src="${pageContext.request.contextPath}/style/images/patientCenterBgs/calendar.png" /><span>
+									训练计划</span>
+								<div class="foldBtn3" title="点击展开收缩"></div>
+								<ul>
+									<li id="todayPlan"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_todayRehabPlanUI.action';">今日计划</li>
+									<li id="planCompleted"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_completedRehabPlansList.action';">完成计划</li>
+									<li id="planNotCompleted"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_notCompletedRehabPlansList.action';">未完成计划</li>
+								</ul></li>
+							<li class="titleLi"><img
+								src="${pageContext.request.contextPath}/style/images/patientCenterBgs/lastthreemonths.png" /><span>
+									康复状况</span>
+								<div class="foldBtn4" title="点击展开收缩"></div>
+								<ul>
+									<li id="rehabAssessment"
+										onclick="javascript:window.location.href='${pageContext.request.contextPath}/patient/rehabAssessment.html';">康复评定</li>
+									<li id="rehabResult"
+										onclick="javascript:window.location.href='${pageContext.request.contextPath}/patient/rehabResult.html';">康复训练效果</li>
+									<li id="selfAssessment"
+										onclick="javascript:window.location.href='${pageContext.request.contextPath}/patient/selfAssessment.html';">自我评定</li>
+								</ul></li>
+							<li class="titleLi"><img
+								src="${pageContext.request.contextPath}/style/images/patientCenterBgs/icon_mail_alt.png"
+								style="opacity:0.8;" /><span> 站内信息</span>
+								<div class="foldBtn5" title="点击展开收缩"></div>
+								<ul>
+									<li id="receiveBox"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_receiveBoxList.action';">收件箱</li>
+									<li id="sendBox"
+										onclick="javascript:window.location.href='http://www.nofate.net.cn/mre/patient_sendBoxList.action';">发件箱</li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
+			</div>

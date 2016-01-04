@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+.leftSide { width: 200px; height: auto; background: #f6f6f6; }
+.assessmentTitle, .forumTitle, .prescriptionTitle { margin:auto; width: 200px; height: auto; font-size: 14px; float: left; border-bottom: 1px dotted #C5C5C5;}
+.assessmentTitle { background-color: #fff; background: url(../images/kfpd_bg.gif) no-repeat;}
+.forumTitle { background: url(../images/kflt_bg.gif) no-repeat;}
+.prescriptionTitle { background: url(../images/kfcf_bg.gif) no-repeat;}
+.foldBtn1, .foldBtn2, .foldBtn3 { margin:7px; width: 20px; height: 20px; background: url(../images/button/foldBtn.gif) no-repeat; float: right; cursor: pointer; }
+.leftSide ul { display:block; margin: 10px auto 20px auto; float:left;}
+.leftSide li { display:block; width: 150px; height: 30px; display: block; float: left; line-height: 30px; text-align:right; padding-right: 30px; float:left;}
+.leftSide li a{color:#000;}
+.leftSide li a:hover{color:#F00; text-decoration:none;}
+.checked{background-color:#DFDFDF;}

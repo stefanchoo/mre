@@ -1,0 +1,46 @@
+/*  CCS鍒濆鍖�*/
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin: 0; padding: 0 }
+body{font:12px/1.5 "微软雅黑","宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
+a { color: #333; text-decoration: none }
+a:hover { color: #cd0200; text-decoration: underline }
+em { font-style: normal }
+ul, li { list-style: none }
+img { border: 0; vertical-align: middle }
+table { border-collapse: collapse; border-spacing: 0; text-align: center; }
+p { word-wrap: break-word; }
+textarea { resize:none; font-family:"微软雅黑","宋体","Arial Narrow",HELVETICA;}
+input::-webkit-input-placeholder {
+font-famliy: "微软雅黑" !important; /* WebKit browsers */
+}
+input:-moz-placeholder {
+font-famliy: "微软雅黑"!important; /* Mozilla Firefox 4 to 18 */
+}
+input::-moz-placeholder {
+font-famliy: "微软雅黑" !important; /* Mozilla Firefox 19+ */
+}
+input:-ms-input-placeholder {
+font-famliy: "微软雅黑 !important; /* Internet Explorer 10+ */
+}
+
+/* 棣栭〉CCS Doucment */
+.topPage { margin: auto; border: 1px solid #CCC; height: 40px; background: url("../images/top_bg.gif") repeat; clear: both; }
+.topDiv { width: 1109px; height: 40px; margin: auto; }
+.logo { width: 40px; height: 40px; float: left; }
+.slogan { width: 600px; height: 40px; line-height: 40px; font-size: 16px; color: #666; float: left; }
+.login { width: 400px; height: 40px; line-height: 40px; font-size: 16px; text-align: right; padding-right: 30px; float: right; }
+.login a { color: #F60; text-decoration: none; }
+
+/* 缃戦〉涓婚 CSS */
+.bodyPage { width: 1109px; margin: 10px auto; }
+
+/* 寮�涓嬩竴涓増鍧楃殑鏃跺�锛岄渶瑕佸厛娓呴櫎涓�笅娴姩 */
+/*  鐢ㄦ潵鏄剧ず MRE 鍥炬爣鐨�*/
+.bannerPage { width: 1109px; height: 120px; clear: both; }
+.banner { width: 400px; height: 120px; float: left; }
+
+/*  灏鹃〉 Doucment */
+.footerPage { margin-top: 100px; width: 1109px; height: 210px; border-top: 1px solid #CCC; }
+.yqlj { height: 40px; text-align: center; line-height: 30px; }
+.hzhb { margin: auto; width: 725px; height: 60px; }
+.warning { border-top: 1px solid #CCC; height: 60px; text-align: center; }
+.gsxx { text-align: center; height: 60px; }

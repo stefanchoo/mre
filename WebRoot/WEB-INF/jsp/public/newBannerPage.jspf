@@ -1,0 +1,33 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- Banner 背景图与搜索框-->
+		<!-- 搜素框设有 康复设备 合作医院 康复专家 康复论坛 用以搜索时的筛选 -->
+		<div id="bannerPage" class="bannerPage">
+			<div class="banner">
+				<s:a action="user_index">
+				<img
+					src="${pageContext.request.contextPath}/style/images/banner.png"
+					width="350px" height="120px" 
+					title="点击回首页"
+					style="cursor:pointer;"/>
+				</s:a>
+			</div>
+			<!-- 放入导航栏快捷入口 -->
+			<div class="doctorCenterNavi">
+				<ul>
+				<li><s:a action="user_index">首页</s:a></li>
+				<li><s:a action="doctor_patientsList">患者列表</s:a></li>
+				<li><s:a action="doctor_equipmentsList">设备列表</s:a></li>
+				<li><s:a action="doctor_rehabPlansList">康复计划</s:a></li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				$('.doctorCenterNavi > ul > li').mouseleave(function(){
+					$(this).css('background', '');
+				});
+				
+				$('.doctorCenterNavi > ul >li').mousemove(function(){
+					$(this).css('background', '#090');
+				});
+			</script>
+		</div>

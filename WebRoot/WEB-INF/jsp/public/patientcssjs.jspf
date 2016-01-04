@@ -1,0 +1,21 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/index.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/login.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/user_left.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/patientCenter.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/jquery-ui.min.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/patientCenter.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-ui-datepicker.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery.datepicker-zh-CN.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-ui-slide.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/leftTemplate.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/index.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery.rotate.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/user_left.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/script/lazyload-min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/editor/kindeditor.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/editor/lang/zh_CN.js"></script>

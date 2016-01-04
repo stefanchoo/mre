@@ -1,0 +1,41 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- Banner 背景图与搜索框-->
+		<!-- 搜素框设有 康复设备 合作医院 康复专家 康复论坛 用以搜索时的筛选 -->
+		<div id="bannerPage" class="bannerPage">
+			<div class="banner">
+				<s:a action="user_index">
+				<img
+					src="${pageContext.request.contextPath}/style/images/banner.png"
+					width="350px" height="120px" 
+					title="点击回首页"
+					style="cursor:pointer;"/>
+				</s:a>
+			</div>
+			<div class="search">
+				<form action="#" method="post">
+					<div id="topSearch" class="topSearch">
+						<div class="search_blank_h15"></div>
+						<div class="searchType">
+							<ul id="searchType">
+								<li id="equipment" class="searchTypeChecked">康复设备</li>
+								<li id="hospital">医院导航</li>
+								<li id="expert">专家推荐</li>
+								<li id="knownledge">康复知识库</li>
+							</ul>
+						</div>
+					</div>
+					<div id="bottomSearch" class="bottomSearch">
+						<div class="search_blank_h10"></div>
+						<div class="searchBox">
+							<input id="searchInput" type="text" class="searchInput" /> <input
+								id="searchButton" type="image"
+								src="${pageContext.request.contextPath}/style/images/button/searchBtn.gif"
+								class="searchButton" />
+						</div>
+						<div class="search_blank_h35"></div>
+					</div>
+				</form>
+			</div>
+			<div class="quickStart"></div>
+		</div>

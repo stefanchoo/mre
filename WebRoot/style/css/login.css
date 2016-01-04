@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.denglu { width: 700px; height: 30px; margin-top: 70px; font-size: 24px; border-left: 1px dashed #CCC; color: #666; text-indent: 2em; float: right; }
+.loginShow { width: 1109px; height: 500px; }
+.loginPic { width: 550px; height: 500px; background: url(../images/login_bg.gif) no-repeat; background-position: center; float: left; }
+.loginContent { margin-right: 100px; width: 400px; height: 500px; float: right; }
+.loginTitle { margin-top: 60px; width: 350px; height: 50px; font-size: 14px; line-height: 60px; text-align: right; border-bottom: 1px solid #CCC; background: url(../images/yhdl_bg.gif) no-repeat; }
+.registerTitle { margin-top: 30px; width: 350px; height: 50px; font-size: 14px; line-height: 60px; text-align: right; border-bottom: 1px solid #CCC; background: url(../images/yhzc_bg.gif) no-repeat; }
+.loginTitle a { color: #F60; }
+.registerTitle a { color: #F60; }
+.loginBox { width: 350px; height: 300px; font-size: 18px; background-color: #EDECE9; }
+.registerBox { width: 350px; height: 380px; font-size: 18px; background-color: #EDECE9; }
+.loginInput { margin-top: 30px; width: 350px; height: 120px; float: left; }
+.registerInput { margin-top: 30px; width: 350px; height: 200px; float: left; }
+.loginInput input { margin: 15px 22px; width: 300px; height: 30px; }
+.registerInput input { margin: 15px 22px; width: 300px; height: 30px; }
+.forgetPwd { width: 350px; height: 50px; font-size: 14px; line-height: 50px; text-align: right; float: left; }
+.forgetPwd a { color: #069; }
+.contract { width: 350px; height: 30px; font-size: 14px; line-height: 30px; text-align: center; float: left; }
+.submitBtn { width: 350px; height: 100px; float: left; }
+.submit_off { margin: 30px 24px; width: 300px; height: 50px; color: #FFF; border: 0px; border-radius: 5px; background-color: #090; font-size: 20px; cursor: pointer; }
+
+/* 嵌入到首页上的登录module */
+.loginTitle_index {margin:0px 65px; width: 300px; height: 50px; font-size: 14px; line-height: 60px; text-align: right; background: url(../images/yhdl_bg.gif) no-repeat; }
+.loginTitle_index a { color: #F60; }
+.loginBox_index {width: 430px; height: 279px; font-size: 18px; border-top: 1px solid #CCC; background-color: #EDECE9;}
+.loginInput_index {margin-top: 30px; width: 430px; height: 120px; float: left;}
+.loginInput_index input { margin: 15px 65px; width: 300px; height: 30px; }
+.submitBtn_index {width: 430px; height: 100px; float: left; }
+.submit_off_index {margin: 10px 65px; width: 300px; height: 50px; font-family:"微软雅黑"; color: #FFF; border: 0px; border-radius: 5px; background-color: #090; font-size: 20px; cursor: pointer;}
+
+/*  登录之后的topPage */
+.loginName { font-size: 16px; font-weight: bold; color: #333; }
+.welcome { font-size: 16px; color: #333; }
+.userMsg { width: 50px; background: url(../images/message_bg.gif) no-repeat; width: 30px; font-size: 14px; color: #333; background-position: left; }
