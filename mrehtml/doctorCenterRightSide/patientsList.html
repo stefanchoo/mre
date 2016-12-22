@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/doctorCenter.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<title>患者列表</title>
+</head>
+
+<body>
+<div class="rightSide">
+  	<div class="centerTitle">患者管理 &gt; 患者列表</div>
+    <!--！这里可以搜索（在添加的时候，可以搜索用户名并且关联其为病人）、循环、支持分页！
+    	字段为： 姓名 性别 疾患 训练计划 入院时间 操作（增 删 查）
+     -->
+    <div class="patientsList">
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="patients">
+      <tr>
+        <th width="15%" scope="col">姓名</th>
+        <th width="15%" scope="col">性别</th>
+        <th width="15%" scope="col">疾患</th>
+        <!-- 这里其实还应该包括训练次数 -->
+        <th width="20%" scope="col">训练计划（今日）</th>
+        <th width="15%" scope="col">入院时间</th>
+        <th width="15%" scope="col">操作</th>
+      </tr>
+      <!--  这里是要循环的 -->
+      <tr style="border-top: 1px solid #999;">
+        <td>张三</td>
+        <td>男</td>
+        <td>脑中风手部偏瘫</td>
+        <td>14:25</td>
+        <td>2015-3-20</td>
+        <td><a style="color:#F00; cursor:pointer;">删除</a> &nbsp; &nbsp; &nbsp; <a style="color:#090; cursor:pointer;">查看</a></td>
+      </tr>
+      <tr style="border-top: 1px solid #999;">
+        <td>李四</td>
+        <td>男</td>
+        <td>脑中风手部偏瘫</td>
+        <td>14:25</td>
+        <td>2015-3-20</td>
+        <td><a style="color:#F00; cursor:pointer;">删除</a> &nbsp; &nbsp; &nbsp; <a style="color:#090; cursor:pointer;">查看</a></td>
+      </tr>
+      <tr style="border-top: 1px solid #999;">
+        <td>赵五</td>
+        <td>男</td>
+        <td>脑中风手部偏瘫</td>
+        <td>14:25</td>
+        <td>2015-3-20</td>
+        <td><a style="color:#F00; cursor:pointer;">删除</a> &nbsp; &nbsp; &nbsp; <a style="color:#090; cursor:pointer;">查看</a></td>
+      </tr>
+      <tr style="border-top: 1px solid #999;">
+        <td>钱六</td>
+        <td>男</td>
+        <td>脑中风手部偏瘫</td>
+        <td>14:25</td>
+        <td>2015-3-20</td>
+        <td><a style="color:#F00; cursor:pointer;">删除</a> &nbsp; &nbsp; &nbsp; <a style="color:#090; cursor:pointer;">查看</a></td>
+      </tr>
+      <tr style="border-top: 1px solid #999;">
+        <td>孙七</td>
+        <td>男</td>
+        <td>脑中风手部偏瘫</td>
+        <td>14:25</td>
+        <td>2015-3-20</td>
+        <td><a style="color:#F00; cursor:pointer;">删除</a> &nbsp; &nbsp; &nbsp; <a style="color:#090; cursor:pointer;">查看</a></td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a style="color:#090; cursor:pointer;">添加患者</a></td>
+      </tr>
+    </table>
+    </div>
+</div>
+</body>
+</html>

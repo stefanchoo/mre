@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/doctorCenter.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/doctorCenter.js"></script>
+<title>设备控制</title>
+</head>
+
+<body>
+<div class="rightSide">
+  	<div class="centerTitle">患者管理 &gt; 患者列表</div>
+     <div class="addContent">
+     	<div class="addFieldArea">
+        	用户名<br/>
+            真实姓名<br/>
+            性别<br/>
+            出生年月<br />
+            所在城市<br />
+            </div>
+            <form id="basicInfoForm" action="../user_edit" method="post">
+            <div class="addFieldPropertyArea">
+            	<input type="hidden" name="id"/>
+            	<input type="text" name="loginName" value="stefanchoo"/>
+                <span id="psearch" class="psearch" title="点击搜索用户"></span><br/>
+                <input type="text" name="trueName" value="朱沪生"/><br/>
+                <input id="sex" type="radio" name="sex" value="male" checked="checked" class="sexArea"/><span>男</span>
+                <input id="sex" type="radio" name="sex" value="female" class="sexArea"/><span>女</span><br/>
+                <input type="text" name="birthday" /><br/>
+                <input type="text" readonly placeholder="请输入城市名" id="city"/><br/>
+                <script type="text/javascript">
+        			LazyLoad.css(["../style/css/cityStyle.css"], function () {
+            		LazyLoad.js(["../script/cityScript.js"], function () {
+               		 var test = new citySelector.cityInit("city");
+           		 });
+       			 });
+   				</script>      
+            </div>
+            <div class="addOperateArea">
+            	<input id="submit" name="" type="submit" value="添加"/>
+                <input type="reset" value="取消"/>
+            </div>
+              </form>
+              </div> 
+</div>
+</body>
+</html>

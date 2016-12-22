@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/index.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/login.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/user_left.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/doctorCenter.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/jquery-ui.min.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../script/jquery.datepicker-zh-CN.js"></script>
+<script type="text/javascript" src="../script/doctorCenter.js"></script>
+<script type="text/javascript" src="../script/leftTemplate.js"></script>
+<script type="text/javascript" src="../script/index.js"></script>
+<script type="text/javascript" src="../script/jquery.rotate.min.js"></script>
+<script type="text/javascript" src="../script/user_left.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#doctorInfo").addClass('li_checked');
+		});
+</script>
+<title>我的账户-个人资料</title>
+</head>
+
+<body>
+<!-- 首页 -->
+<div id="topPage" class="topPage">
+  <div class="topDiv">
+    <div> <img src="../style/images/logo.png" class="logo"/> </div>
+    <div class="slogan">康复设备医疗网络平台，与您携手共度康复生活</div>
+    <div class="login"> <span class="welcome">您好！</span> &nbsp;<a href="../patientCenter.html"><span id="loginName" class="loginName">stefanchoo </span></a> 
+    <a href="#" target="_blank" class="userMsg"><span id="userMsg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0)</span></a>
+     &nbsp;|&nbsp;
+     <a href="../index.html" class="exit">退出</a> </div>
+  </div>
+</div>
+
+<!-- 设置居中 放大缩小时，始终处于中间位置-->
+<div class="bodyPage"> 
+  <!-- Banner 背景图与搜索框-->
+	<!-- 搜素框设有 康复设备 合作医院 康复专家 康复论坛 用以搜索时的筛选 -->
+  <div id="bannerPage" class="bannerPage">
+    <div class="banner"><img src="../style/images/banner.png" width="360px" height="120px"/></div>
+    <div class="search">
+      <form action="#" method="post">
+        <div id="topSearch" class="topSearch">
+          <div class="search_blank_h15"></div>
+          <div class="searchType">
+            <ul id="searchType">
+              <li id="equipment" class="searchTypeChecked">康复设备</li>
+              <li id="hospital">合作医院</li>
+              <li id="expert">康复专家</li>
+              <li id="knownledge">康复知识库</li>
+            </ul>
+          </div>
+        </div>
+        <div id="bottomSearch" class="bottomSearch">
+          <div class="search_blank_h10"></div>
+          <div class="searchBox">
+            <input id="searchInput"  type="text" class="searchInput"/>
+            <input id="searchButton" type="image" src="../style/images/button/searchBtn.gif" class="searchButton"/>
+          </div>
+          <div class="search_blank_h35"></div>
+        </div>
+      </form>
+    </div>
+    <div class="quickStart"></div>
+  </div>
+  
+  <div class="mainPage">
+    <div class="leftSideTemplate">
+    <div class="leftSide">
+    	<div class="myCenterTitle" onclick="javascript:window.location.href='../doctor/doctorCenter.html';">我 的 中 心</div>
+        <div class="myCenterContent">
+        	<ul>
+            	<li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_id_alt.png"/><span> 我的账户</span>
+                <div class="foldBtn1" title="点击展开收缩"></div>
+                	<ul>
+                    	<li id="doctorInfo" onclick="javascript:window.location.href='../doctor/doctorInfo.html';">个人资料</li>
+                        <li id="creditsManagement" onclick="javascript:window.location.href='../doctor/creditsManagement.html';">积分管理</li>
+                        <li id="changePassword" onclick="javascript:window.location.href='../doctor/changePassword.html';">修改密码</li>
+                        <li id="messageSetup" onclick="javascript:window.location.href='../doctor/messageSetup.html';">短信通知设置</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_group.png" /><span> 患者管理</span>
+                	<div class="foldBtn2" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="patientsList" onclick="javascript:window.location.href='../doctor/patientsList.html';">患者列表</li>   
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_archive.png" /><span> 设备管理</span>
+                	<div class="foldBtn3" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="equipmentsList" onclick="javascript:window.location.href='../doctor/equipmentsList.html';">设备列表</li>
+                        <li id="equipmentsControl" onclick="javascript:window.location.href='../doctor/equipmentsControl.html';">设备控制</li> 
+                        <li id="equipmentsCheck" onclick="javascript:window.location.href='../doctor/equipmentsCheck.html';">设备测试</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_clipboard.png" /><span> 我的工作</span>
+                	<div class="foldBtn4" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="todayPlan" onclick="javascript:window.location.href='../doctor/todayPlan.html';">今日计划</li>
+                        <li id="makePlans" onclick="javascript:window.location.href='../doctor/makePlans.html';">康复计划制定</li>
+                        <li id="assessmentManagement" onclick="javascript:window.location.href='../doctor/assessmentManagement.html';">评定量表管理</li>
+                        <li id="prescriptionManagement" onclick="javascript:window.location.href='../doctor/prescriptionManagement.html';">康复处方管理</li>
+                    </ul>
+                </li>
+                
+                <li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_cloud.png" /><span> 我的收藏</span>
+                	<div class="foldBtn5" title="点击展开收缩"></div>
+                    <ul>
+                        <li id="equipmentCollected" onclick="javascript:window.location.href='../doctor/equipmentCollected.html';">康复设备</li>
+                        <li id="prescriptionCollected" onclick="javascript:window.location.href='../doctor/prescriptionCollected.html';">康复处方</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/doctorCenterBgs/icon_mail.png" style="opacity:0.8"/><span> 站内信息</span>
+                	<div class="foldBtn6" title="点击展开收缩"></div>
+                    <ul>
+                        <li id="systemMessage" onclick="javascript:window.location.href='../doctor/systemMessage.html';">站内信</li>
+                        <li id="patientsMessage" onclick="javascript:window.location.href='../doctor/patientsMessage.html';">患者来信</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!-- 患者中心首页 -->
+    <div class="rightSideTemplate">
+    <div class="rightSide">
+    	<div class="centerTitle">我的账户 &gt; 个人资料</div>
+        <div class="infoContent">
+         <form action="../user_edit" method="post">
+         	<input type="hidden" name="id"/>
+        	<div class="userPic"><img src="../style/images/userImgs/1.png" title="点击修改头像" style="cursor:pointer;" /></div>
+            <div class="fieldArea">
+        	用户名<br/>
+            真实姓名<br/>
+            性别<br/>
+            邮箱<br/>
+            手机<br/>
+            微信<br/>
+            单位<br/>
+            等级<br/>
+            在线时间<br/>
+            注册时间<br/>
+            </div>
+            <div class="fieldPropertyArea">
+            	<input type="text" name="loginName" value="stefanchoo"/><br/>
+                <input type="text" name="trueName" value="朱沪生"/><br/>
+                <input id="sex" type="radio" name="sex" value="male" checked="checked" class="sexArea"/><span>男</span>
+                <input id="sex" type="radio" name="sex" value="female" class="sexArea"/><span>女</span><br/>
+                <input type="email" name="email" value="1161869809@qq.com"/><br/>
+                <input type="text" name="phone" value="13817320275" /><br />
+                <input type="text" name="wechat" value="stefan0306"/><br/>
+                <input type="text" name="hospital" value="新华医院"/><br/>
+                <input type="text" name="level" value="23级"  disabled="disabled"/><br />
+                <input type="text" name="onLineTime" value="139小时" disabled="disabled"/><br />
+                <input type="text" name="registerTime" value="2015-3-20 14:59 " disabled="disabled" />        
+            </div>
+            <div class="operateArea">
+            	<input type="submit" value="保存" onclick="javascript: return window.confirm('确定要保存修改后的个人资料吗？');"/>
+                <input type="reset" value="取消"/>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </div>
+  <!-- Footer Page -->
+  <div class="footerPage"> 
+    <!-- 友情链接 -->
+    <div class="yqlj"> 友情链接&nbsp; <a href="http://health.sohu.com/" target="_blank">搜狐健康</a> <a href="http://www.xywy.com" target="_blank">寻医问药网</a> <a href="http://www.iiyi.com" target="_blank">爱爱医</a> <a href="http://health.sina.com.cn/index.shtml" target="_blank">新浪健康</a> <a href="http://www.china-obgyn.net" target="_blank">妇产科网</a> <a href="http://www.yaolan.com" target="_blank">摇篮网</a> <a href="http://www.fx120.net" target="_blank">放心医苑网</a> <a href="http://www.familydoctor.com.cn" target="_blank">家庭医生在线</a> <a href="http://www.csdn.net/" target="_blank">csdn</a> <a href="http://www.99.com.cn/" target="_blank">99健康</a> <a href="http://health.ifeng.com/" target="_blank">凤凰网健康</a> <a href="http://baby.ifeng.com/" target="_blank">凤凰网亲子</a> <a href="http://www.xingshulin.com/" target="_blank">杏树林</a> <a href="http://www.medlive.cn" target="_blank">医脉通</a> </div>
+    <!-- 合作伙伴 -->
+    <div class="hzhb"> <a target="_blank" href="http://health.sohu.com/"><img src="../style/images/footerPageImgs/overseas03.jpg" /></a> <a target="_blank" href="http://health.sina.com.cn/"><img src="../style/images/footerPageImgs/overseas04.jpg" /></a> <a target="_blank" href="http://open.baidu.com/coop/v.html"><img src="../style/images/footerPageImgs/baidu_coop.jpg" /></a> <a target="_blank" href="http://yiliao.qq.com/"><img src="../style/images/footerPageImgs/overseas06.jpg" /></a> <a target="_blank" href="http://www.stluciabj.cn/"><img src="../style/images/footerPageImgs/overseas07.jpg" /></a> <a target="_blank" href="http://www.hao123.com/?src=hdf"><img src="../style/images/footerPageImgs/overseas08.jpg" /></a> </div>
+    <div class="warning"> 提示：任何关于疾病的建议都不能替代执业医师的面对面诊断。所有门诊时间仅供参考，最终以医院当日公布为准。网友、医生言论仅代表其个人观点，不代表本站同意其说法，请谨慎参阅，本站不承担由此引起的法律责任。</div>
+    <!-- 公司信息 -->
+    <div class="gsxx"> <a href="http://www.mre.com/info/aboutus.html">关于MRE</a>&nbsp;| <a href="http://zixun.mre.com">咨询MRE</a>&nbsp;| <a href="http://www.mre.com/info/contactus.html">联系MRE网站</a>&nbsp;| <a href="http://www.mre.com/suggestion/suggestion" class="blue">意见和建议</a>&nbsp;| <a href="http://www.mre.com/iphone/index.htm">手机版</a>&nbsp;| <a href="http://www.mre.com/info/hz.html">合作联盟</a>&nbsp;| <a href="http://www.mre.com/info/job.html" class="blue">诚聘英才</a>&nbsp;| <a href="http://www.mre.com/info/eula.html">内容管理声明</a>/<a href="http://www.mre.com/info/copyrights.html">版权</a>&nbsp;| <a href="http://www.mre.com/haiwai">出国看病</a> <br />
+      上海市公安局杨浦分局备案编号：xxxxxxxx<a href="http://www.mre.com/info/icp_auth.html" target="_blank">沪ICP证080340号</a> <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备xxxxxx号</a> <a href="http://www.mre.com/info/wsj_auth.html" target="_blank">沪卫网审[2015]第xxxx号</a> <a href="http://www.mre.com/info/bbs_auth.html" target="_blank">电信业务审批[2015]字第xxx号</a> <br />
+      MRE在线版权所有 Copyright 2015 </div>
+  </div>
+</div>
+</body>
+</html>

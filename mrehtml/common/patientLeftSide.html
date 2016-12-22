@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/user_left.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/jquery.rotate.min.js"></script>
+<script type="text/javascript" src="../script/user_left.js"></script>
+<title>病人中心的左边目录</title>
+</head>
+
+<body>
+	<div class="leftSide">
+    	<div class="myCenterTitle" onclick="javascript:window.location.href='../patient/patientCenter.html';">我 的 中 心</div>
+        <div class="myCenterContent">
+        	<ul>
+            	<li class="titleLi"><img src="../style/images/patientCenterBgs/user.png" style="opacity:0.8;"/><span> 我的账户</span>
+                <div class="foldBtn1" title="点击展开收缩"></div>
+                	<ul>
+                    	<li id="patientInfo" onclick="javascript:window.location.href='../patient/patientInfo.html';">个人资料</li>
+                        <li id="creditsManagement" onclick="javascript:window.location.href='../patient/creditsManagement.html';">积分管理</li>
+                        <li id="changePassword" onclick="javascript:window.location.href='../patient/changePassword.html';">修改密码</li>
+                        <li id="messageSetup" onclick="javascript:window.location.href='../patient/messageSetup.html';">短信通知设置</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/patientCenterBgs/patientdata.png" /><span> 医疗状况</span>
+                	<div class="foldBtn2" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="myMedicalRecord" onclick="javascript:window.location.href='../patient/myMedicalRecord.html';">我的病历</li>
+                        <li id="myDoctor" onclick="javascript:window.location.href='../patient/myDoctor.html';">我的医生</li> 
+                        <li id="myHealthInsurance" onclick="javascript:window.location.href='../patient/myHealthInsurance.html';">我的医保</li>
+                        <li id="rehabExperience" onclick="javascript:window.location.href='../patient/rehabExperience.html';">康复经验</li>
+                       
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/patientCenterBgs/calendar.png" /><span> 训练计划</span>
+                	<div class="foldBtn3" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="todayPlan" onclick="javascript:window.location.href='../patient/todayPlan.html';">今日计划</li>
+                        <li id="planCompleted" onclick="javascript:window.location.href='../patient/planCompleted.html';">完成计划</li> 
+                        <li id="planNotCompleted" onclick="javascript:window.location.href='../patient/planNotCompleted.html';">未完成计划</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/patientCenterBgs/lastthreemonths.png" /><span> 康复状况</span>
+                	<div class="foldBtn4" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="rehabAssessment" onclick="javascript:window.location.href='../patient/rehabAssessment.html';">康复评定</li>
+                        <li id="rehabResult" onclick="javascript:window.location.href='../patient/rehabResult.html';">康复训练效果</li>
+                        <li id="selfAssessment" onclick="javascript:window.location.href='../patient/selfAssessment.html';">自我评定</li>
+                    </ul>
+                </li>
+                <li class="titleLi"><img src="../style/images/patientCenterBgs/icon_mail_alt.png" style="opacity:0.8;"/><span> 站内信息</span>
+                	<div class="foldBtn5" title="点击展开收缩"></div>
+                    <ul>
+                    	<li id="systemMessage" onclick="javascript:window.location.href='../patient/systemMessage.html';">站内信</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

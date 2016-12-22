@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="style/css/index.css" />
+<script type="text/javascript" src="script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="script/index.js"></script>
+<title>MRE首页</title>
+</head>
+
+<body>
+
+<!-- 首页 -->
+<div id="topPage" class="topPage">
+  <div class="topDiv">
+    <div> <img src="style/images/logo.png" class="logo"/> </div>
+    <div class="slogan">康复设备的医疗网络平台，与您携手共度康复生活</div>
+    <div class="login"> <a href="login/login.html">登录</a> | <a href="login/register.html">注册</a> </div>
+  </div>
+</div>
+
+<!-- 设置居中 放大缩小时，始终处于中间位置-->
+<div class="bodyPage"> 
+  <!-- Banner 背景图与搜索框-->
+	<!-- 搜素框设有 康复设备 合作医院 康复专家 康复论坛 用以搜索时的筛选 -->
+  <div id="bannerPage" class="bannerPage">
+    <div class="banner"><img src="style/images/banner.png" width="360px" height="120px"/></div>
+    <div class="search">
+      <form action="#" method="post">
+        <div id="topSearch" class="topSearch">
+          <div class="search_blank_h15"></div>
+          <div class="searchType">
+            <ul id="searchType">
+              <li id="equipment" class="searchTypeChecked">康复设备</li>
+              <li id="hospital">医院导航</li>
+              <li id="expert">专家推荐</li>
+              <li id="knownledge">康复知识库</li>
+            </ul>
+          </div>
+        </div>
+        <div id="bottomSearch" class="bottomSearch">
+          <div class="search_blank_h10"></div>
+          <div class="searchBox">
+            <input id="searchInput"  type="text" class="searchInput"/>
+            <input id="searchButton" type="image" src="style/images/button/searchBtn.gif" class="searchButton"/>
+          </div>
+          <div class="search_blank_h35"></div>
+        </div>
+      </form>
+    </div>
+    <div class="quickStart"></div>
+  </div>
+  
+  <!-- 导航框 + 照片墙 -->
+	<!--  导航栏显示，鼠标移入显示二级菜单 -->
+	<!-- 照片墙功能： 1. 左侧显示推荐设备的照片，右边显示设备信息
+				     2. 点击照片或者设备名称进入查看详细介绍
+				    3. 鼠标放上照片，显示左右切换按钮，用于循环显示推荐的四款康复设备 -->
+<div class="naviPicPage">
+  <div class="navigationDiv">
+    <ul id="navi_first" class="navi_first">
+      <li><a href="#">首页</a></li>
+      <li><a href="equipment/equipmentMainList.html" target="_blank">康复设备</a>
+          <ul class="navi_second">
+            <li><a href="equipment/equipmentList.html?id=1" target="_blank">&gt; 运动治疗设备</a></li>
+            <li><a href="equipment/equipmentList.html?id=2" target="_blank">&gt; 物理因子治疗设备</a></li>
+            <li><a href="equipment/equipmentList.html?id=3" target="_blank">&gt; 作业治疗设备</a></li>
+            <li><a href="equipment/equipmentList.html?id=4" target="_blank">&gt; 言语治疗设备</a></li>
+            <li><a href="equipment/equipmentList.html?id=5" target="_blank">&gt; 传统康复治疗设备</a></li>
+          </ul>
+      </li>
+      <li><a href="hospital/hospitalMainList.html" target="_blank">医院导航</a>
+          <ul class="navi_second">
+            <li><a href="hospital/hospitalList.html?id=1" target="_blank">&gt; 上海</a></li>
+            <li><a href="hospital/hospitalList.html?id=2" target="_blank">&gt; 北京</a></li>
+            <li><a href="hospital/hospitalList.html?id=3" target="_blank">&gt; 江苏</a></li>
+            <li><a href="hospital/hospitalList.html?id=4" target="_blank">&gt; 浙江</a></li>
+            <li><a href="hospital/hospitalList.html?id=5" target="_blank">&gt; 广州</a></li>
+          </ul>
+      </li>
+      <li><a href="expert/expertList.html" target="_blank">专家推荐</a>
+          <ul class="navi_second">
+            <li><a href="expert/expertShow.html?id=1" target="_blank">&gt; 励建安</a></li>
+            <li><a href="expert/expertShow.html?id=2" target="_blank">&gt; 喻洪流</a></li>
+            <li><a href="expert/expertShow.html?id=3" target="_blank">&gt; cbc</a></li>
+            <li><a href="expert/expertShow.html?id=4" target="_blank">&gt; dbc</a></li>
+            <li><a href="expert/expertShow.html?id=5" target="_blank">&gt; ebc</a></li>
+          </ul>
+      </li>
+      <li><a href="assessment/assessmentList.html" targrt="_blank">康复知识库</a>
+          <ul class="navi_second">
+            <li><a href="assessment/assessmentList.html" targrt="_blank">&gt; 康复评定量表</a></li>
+            <!-- 康复处方只有医生登陆之后才能看 -->
+            <li><a href="prescription/prescriptionList.html" targrt="_blank">&gt; 常见康复处方</a></li>
+            <!-- 康复论坛，回复发帖需要登录 -->
+            <li><a href="#">&gt; 站内康复论坛</a></li>
+          </ul>
+      </li>
+      <li><a href="#01">联系我们</a></li>
+    </ul>
+	</div>
+
+    <div class="picDiv">
+      <div id="picWall" class="picWall">
+        <div class="pic_blank_h150"></div>
+        <div class="arrows">
+          <div class="arrows_pre"></div>
+          <div class="arrows_blank_w580"></div>
+          <div class="arrows_pos"></div>
+        </div>
+        <div class="pic_blank_h150"></div>
+      </div>
+      <div class="picDesc">
+        <div id="name" class="name"><a href="#">Armeo Power</a></div>
+        <br/>
+        <div id="content" class="content"> Armeo Power 是一台独特的上肢康复训练与评估设备。适用于因中枢神经、周围神经、脊髓、肌肉或骨骼疾病引		起的上肢功能障碍或功能受限的患者。
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--Main Page-->
+	<!-- 主页面左边显示康复设备、合作医院、康复专家的信息，右边显示康复评定量表、康复论坛以及联系我们的信息 
+		其中康复评定量表与康复论坛取前 15 条数据放入主页面
+		注： 没有显示康复处方是因为康复处方是医生登陆之后才可见的-->
+  <div class="mainPage">
+	<!-- 左边 -->
+    <div id="leftPage" class="leftPage">
+      <div class="leftPageTemplate">
+        <div class="mainTitle">康 复 设 备</div>
+        <div class="mainContent">
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="equipment/equipmentList.html" target="_blank">运动治疗</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+            </div>
+            <div class="more"><a href="equipment/equipmentList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="equipment/equipmentList.html" target="_blank">物理治疗</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+            </div>
+            <div class="more"><a href="equipment/equipmentList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="equipment/equipmentList.html" target="_blank">作业治疗</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+            </div>
+            <div class="more"><a href="equipment/equipmentList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="equipment/equipmentList.html" target="_blank">言语治疗</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+            </div>
+            <div class="more"><a href="equipment/equipmentList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="equipment/equipmentList.html" target="_blank">传统康复</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+              <div><a href="equipment/equipmentShow.html?id=1" target="_blank">治疗床</a></div>
+            </div>
+            <div class="more"><a href="equipment/equipmentList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="leftPageTemplate">
+        <div class="mainTitle">合 作 医 院</div>
+        <div class="mainContent">
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="hospital/hospitalList.html" target="_blank">上 海</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="#">上海第一人民医院</a></div>
+              <div><a href="#">上海第一康复医院</a></div>
+              <div><a href="#">新华医院</a></div>
+              <div><a href="#">华山医院</a></div>
+              <div><a href="#">瑞金医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+            </div>
+            <div class="more"><a href="hospital/hospitalList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="hospital/hospitalList.html" target="_blank">北 京</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+            </div>
+            <div class="more"><a href="hospital/hospitalList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="hospital/hospitalList.html" target="_blank">江 苏</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+            </div>
+            <div class="more"><a href="hospital/hospitalList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="hospital/hospitalList.html" target="_blank">浙 江</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+            </div>
+            <div class="more"><a href="hospital/hospitalList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+          <div class="mainContentItems">
+            <div class="mainContentItemsType"><a href="hospital/hospitalList.html" target="_blank">广 州</a></div>
+            <div class="mainContentItemsName">
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+              <div><a href="#">杨浦医院</a></div>
+            </div>
+            <div class="more"><a href="hospital/hospitalList.html" target="_blank">更多 &gt;&gt;</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="leftPageTemplate">
+        <div class="mainTitle">康 复 专 家</div>
+        <div class="mainContent">
+          <div class="mainContentExpert">
+            <div id="expertPhoto" class="expertPhoto"><a href="expert/expertShow.html?id=1" target="_blank"><img src="style/images/expertImgs/expert_01.gif" width="130px" height="130px"/></a></div>
+            <div class="expertInfo">
+              <div id="name" class="expertInfoTemplate"><span>励建安大夫</span></div>
+              <div id="hospital" class="expertInfoTemplate">单位： 南京医科大学第一附属医院</div>
+              <div id="goodat" class="expertInfoTemplate">擅长： 心血管康复等...</div>
+            </div>
+            <div class="more"><a href="expert/expertShow.html?id=1" target="_blank">详细信息</a></div>
+          </div>
+          <div class="mainContentExpert">
+            <div id="expertPhoto" class="expertPhoto"><a href="expert/expertShow.html?id=1" target="_blank"><img src="style/images/expertImgs/expert_01.gif" width="130px" height="130px"/></a></div>
+            <div class="expertInfo">
+              <div id="name" class="expertInfoTemplate"><span>励建安大夫</span></div>
+              <div id="hospital" class="expertInfoTemplate">单位： 南京医科大学第一附属医院</div>
+              <div id="goodat" class="expertInfoTemplate">擅长： 心血管康复等...</div>
+            </div>
+            <div class="more"><a href="expert/expertShow.html?id=1" target="_blank">详细信息</a></div>
+          </div>
+          <div class="mainContentExpert">
+            <div id="expertPhoto" class="expertPhoto"><a href="expert/expertShow.html?id=1" target="_blank"><img src="style/images/expertImgs/expert_01.gif" width="130px" height="130px"/></a></div>
+            <div class="expertInfo">
+              <div id="name" class="expertInfoTemplate"><span>励建安大夫</span></div>
+              <div id="hospital" class="expertInfoTemplate">单位： 南京医科大学第一附属医院</div>
+              <div id="goodat" class="expertInfoTemplate">擅长： 心血管康复等...</div>
+            </div>
+            <div class="more"><a href="expert/expertShow.html?id=1" target="_blank">详细信息</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rightPage" class="rightPage">
+      <div class="rightPageTemplate_01">
+        <div class="right_blank_h40"></div>
+          <ul id="assessmentList"  class="assessmentList">
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">生长激素治疗矮小症 如何正确停药</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">看懂血脂化验单，警惕血脂异常伤心脑</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">中国人如何管理血脂 预防心脑血管病</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">颈椎病显微手术 保护神经和血管</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">不孕不育该查啥</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">子宫肌瘤想保子宫，手术方法如何选择</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">支气管热成形术治疗重症/难治性哮喘</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">到底前列腺癌如何确诊？</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">直肠癌早期筛查怎么做</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">补片治疗降低疝复发率</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">治愈疝要靠开刀修补</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">治疗先心病又有微创新招</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">杜绝便秘，告别马桶上的挣扎</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">直肠癌早期筛查怎么做</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">补片治疗降低疝复发率</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">治愈疝要靠开刀修补</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">治疗先心病又有微创新招</a></li>
+            <li><a href="assessment/assessmentShow.html?id=?" target="_blank">杜绝便秘，告别马桶上的挣扎</a></li>
+          </ul>
+      </div>
+
+      <div class="rightPageTemplate_02">
+         <div class="right_blank_h40"></div>
+			<!-- 这里显示 -->
+          <ul id="topicList"  class="assessmentList" data="">
+            <li><a href="forum/topicShow.html?id=?" target="_blank">生长激素治疗矮小症 如何正确停药</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">看懂血脂化验单，警惕血脂异常伤心脑</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">中国人如何管理血脂 预防心脑血管病</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">颈椎病显微手术 保护神经和血管</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">不孕不育该查啥</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">子宫肌瘤想保子宫，手术方法如何选择</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">支气管热成形术治疗重症/难治性哮喘</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">到底前列腺癌如何确诊？</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">直肠癌早期筛查怎么做</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">补片治疗降低疝复发率</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">治愈疝要靠开刀修补</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">治疗先心病又有微创新招</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">杜绝便秘，告别马桶上的挣扎</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">直肠癌早期筛查怎么做</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">补片治疗降低疝复发率</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">治愈疝要靠开刀修补</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">治疗先心病又有微创新招</a></li>
+            <li><a href="forum/topicShow.html?id=?" target="_blank">杜绝便秘，告别马桶上的挣扎</a></li>
+          </ul>
+      </div>
+
+      <div class="contactus">
+      <a name="01"></a>
+        <div class="right_blank_h40"></div>
+		<div class="right_blank_h200">
+        <div class="usInfo">
+          <div class="usName">&nbsp;单位：上海理工大学</div>
+          <div class="usEmail">&nbsp;邮箱：mre.com@163.com</div>
+          <div class="usTalk"><div>在线留言</div></div>
+        </div>
+        <div class="weixinQR">
+          扫一扫，加入我们
+        </div>
+      </div>
+    </div>
+	</div>
+  </div>
+  
+  <!-- Footer Page -->
+  <div class="footerPage"> 
+    <!-- 友情链接 -->
+    <div class="yqlj"> 友情链接&nbsp; <a href="http://health.sohu.com/" target="_blank">搜狐健康</a> <a href="http://www.xywy.com" target="_blank">寻医问药网</a> <a href="http://www.iiyi.com" target="_blank">爱爱医</a> <a href="http://health.sina.com.cn/index.shtml" target="_blank">新浪健康</a> <a href="http://www.china-obgyn.net" target="_blank">妇产科网</a> <a href="http://www.yaolan.com" target="_blank">摇篮网</a> <a href="http://www.fx120.net" target="_blank">放心医苑网</a> <a href="http://www.familydoctor.com.cn" target="_blank">家庭医生在线</a> <a href="http://www.csdn.net/" target="_blank">csdn</a> <a href="http://www.99.com.cn/" target="_blank">99健康</a> <a href="http://health.ifeng.com/" target="_blank">凤凰网健康</a> <a href="http://baby.ifeng.com/" target="_blank">凤凰网亲子</a> <a href="http://www.xingshulin.com/" target="_blank">杏树林</a> <a href="http://www.medlive.cn" target="_blank">医脉通</a> </div>
+    <!-- 合作伙伴 -->
+    <div class="hzhb"> <a target="_blank" href="http://health.sohu.com/"><img src="style/images/footerPageImgs/overseas03.jpg" /></a> <a target="_blank" href="http://health.sina.com.cn/"><img src="style/images/footerPageImgs/overseas04.jpg" /></a> <a target="_blank" href="http://open.baidu.com/coop/v.html"><img src="style/images/footerPageImgs/baidu_coop.jpg" /></a> <a target="_blank" href="http://yiliao.qq.com/"><img src="style/images/footerPageImgs/overseas06.jpg" /></a> <a target="_blank" href="http://www.stluciabj.cn/"><img src="style/images/footerPageImgs/overseas07.jpg" /></a> <a target="_blank" href="http://www.hao123.com/?src=hdf"><img src="style/images/footerPageImgs/overseas08.jpg" /></a> </div>
+    <div class="warning"> 提示：任何关于疾病的建议都不能替代执业医师的面对面诊断。所有门诊时间仅供参考，最终以医院当日公布为准。网友、医生言论仅代表其个人观点，不代表本站同意其说法，请谨慎参阅，本站不承担由此引起的法律责任。</div>
+    <!-- 公司信息 -->
+    <div class="gsxx"> <a href="http://www.mre.com/info/aboutus.html">关于MRE</a>&nbsp;| <a href="http://zixun.mre.com">咨询MRE</a>&nbsp;| <a href="http://www.mre.com/info/contactus.html">联系MRE网站</a>&nbsp;| <a href="http://www.mre.com/suggestion/suggestion" class="blue">意见和建议</a>&nbsp;| <a href="http://www.mre.com/iphone/index.htm">手机版</a>&nbsp;| <a href="http://www.mre.com/info/hz.html">合作联盟</a>&nbsp;| <a href="http://www.mre.com/info/job.html" class="blue">诚聘英才</a>&nbsp;| <a href="http://www.mre.com/info/eula.html">内容管理声明</a>/<a href="http://www.mre.com/info/copyrights.html">版权</a>&nbsp;| <a href="http://www.mre.com/haiwai">出国看病</a> <br />
+      上海市公安局杨浦分局备案编号：xxxxxxxx<a href="http://www.mre.com/info/icp_auth.html" target="_blank">沪ICP证080340号</a> <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备xxxxxx号</a> <a href="http://www.mre.com/info/wsj_auth.html" target="_blank">沪卫网审[2015]第xxxx号</a> <a href="http://www.mre.com/info/bbs_auth.html" target="_blank">电信业务审批[2015]字第xxx号</a> <br />
+      MRE在线版权所有 Copyright 2015 </div>
+  </div>
+</div>
+</body>
+</html>

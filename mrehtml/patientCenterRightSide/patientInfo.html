@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/patientCenter.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/patientCenter.js"></script>
+<title>患者个人资料</title>
+</head>
+
+<body>
+	<div class="rightSide">
+    	<div class="centerTitle">我的账户 &gt; 个人资料</div>
+        <div class="infoContent">
+         <form action="#" method="post">
+         <input type="hidden" name="id"/>
+        	<div class="userPic"><img src="../style/images/userImgs/1.png" title="点击修改头像" style="cursor:pointer;" /></div>
+            <div class="fieldArea">
+        	用户<br/>
+            真实姓名<br/>
+            性别<br/>
+            邮箱<br/>
+            手机<br/>
+            微信<br/>
+            等级<br/>
+            在线时间<br/>
+            注册时间<br/>
+            </div>
+            <div class="fieldPropertyArea">
+            	<input type="text" name="loginName" value="stefanchoo"/><br/>
+                <input type="text" name="trueName" value="朱沪生"/><br/>
+                <input id="sex" type="radio" name="sex" value="male" checked="checked" class="sexArea"/><span>男</span>
+                <input id="sex" type="radio" name="sex" value="female" class="sexArea"/><span>女</span><br/>
+                <input type="email" name="email" value="1161869809@qq.com"/><br/>
+                <input type="text" name="phone" value="13817320275" /><br />
+                <input type="text" name="wechat" value="stefan0306"/><br/>
+                <input type="text" name="level" value="23级"  disabled="disabled"/><br />
+                <input type="text" name="onLineTime" value="139小时" disabled="disabled"/><br />
+                <input type="text" name="registerTime" value="2015-3-20 14:59 " disabled="disabled" />        
+            </div>
+            <div class="operateArea">
+            	<input type="submit" value="保存" onclick="javascript: return window.confirm('确定要保存修改后的个人资料吗？');"/>
+                <input type="reset" value="取消"/>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.mainPage { margin-top: 20px; width: 1109px; height: 764px; border:1px solid #E1E1E1;}
+.leftSideTemplate { width: 201px; height: 764px; float: left; border-radius:5px;}
+.rightSideTemplate { width: 901px; height: 764px; float: right; border-left:1px solid #CCC; border-radius:5px; border: 1px solid #0C3;}
+.centerTitle {margin:auto 25px; width: 851px; height: 60px; font-size:20px; line-height:60px; text-indent:2em; border-bottom: 1px solid #D8D8D8;}
+
+/* 欢迎页面 CSS*/
+.rightSide {width:901px; height: auto;}
+.welcomeInfo {width:501px; height: 130px; margin: 20px auto 30px 100px;}
+.userPic{width:102px; height: 102px; border-radius: 5px; border: 1px solid #DFDFDF; float:left; text-align:center; line-height: 102px; }
+.userInfo{width: 350px; height: 130px; line-height: 40px; font-size:20px; color:#000; float:right; text-align:center;}
+.instruction{width: 861px; height:560px; border-top:1px solid #E1E1E1; padding:20px;}
+.wltitle{display:inline-block; width:400px; height:30px; font-size: 18px; font-weight:bold; color:#333; float:left;}
+.registerTime{display:inline-block; width:300px; height:30px; font-size: 14px; text-align:right; float:right;}
+.instruction p{display:inline-block; margin-top: 20px; width:861px; height:auto; font-size:16px; text-indent:2em; line-height: 25px; float:left;}
+
+/*  个人资料 CSS */
+.infoContent {margin:20px auto; width:501px; height:auto; font-size: 16px;}
+.fieldArea {width: 150px; height:400px; text-align: right; line-height:40px; float:left;}
+.fieldPropertyArea{width: 180px; height: 500px; text-align: left; float:left; padding-left: 30px;}
+.fieldPropertyArea input{display:inline-block; width:170px; height: 30px; margin: 5px; float: left; border: 0px; font-size:16px; font-family:"微软雅黑";}
+#sex{width:30px; height:30px;}
+.fieldPropertyArea span{display:inline-block; width: 30px; height:30px; line-height:40px; float:left;}
+.operateArea{width:431px; height: 50px;}
+.operateArea input{ display:incline-block; width:100px; height:30px; margin-left:60px; border:0px; background-color:#0C0; color:#FFF; font-weight:bold; font-size:16px; border-radius:5px; font-family:"微软雅黑"; float:right; cursor:pointer;}
+
+/*  积分管理 CSS */
+.creditsArea{width:900px; height:150px; margin: 30px auto; text-align:center; line-hight:50px; font-size:20px; border-bottom: 1px solid #D8D8D8;}
+.myHealthInsurance a,.creditsArea a{font-size:12px; cursor: pointer;}
+.myHealthInsurance a:hover,.creditsArea a:hover{font-size:14px;color:#09C;text-decoration:none;}
+.getCredits{width:941px; height:150px; margin: 30px auto; text-align:center; line-hight:50px; font-size:16px;}
+
+/* 修改密码 CSS */
+.passwordPropertyArea{width: 180px; height: 180px; text-align: left; float:left; padding-left: 30px;}
+.passwordPropertyArea input{display:inline-block; width:170px; height: 28px; margin: 5px; float: left; font-size:16px; font-family:"微软雅黑";}
+.confirmArea{width:140px; height:30px; margin: auto;}
+.confirmArea input{width:140px; height:30px; border:0px;background-color:#0C0; color:#FFF; font-weight:bold; font-size:16px; border-radius:5px; font-family:"微软雅黑";cursor:pointer;}
+
+/*  短信通知设置 CSS*/
+.myHealthInsurance,.myMedicalRecord,.messageSetupArea{width:800px; height:250px; margin:20px auto;font-size:16px; text-align:center;}
+
+/* 我的医生信息 CSS */
+.myDoctor{width:700px; height:auto; margin:20px auto;font-size:16px; line-height:30px;}
+.myDoctorInfo{width:560px; height: auto; float:right;}
+
+/*  康复经验 CSS */
+.rehabExperience{width:800px; height:auto; margin:20px auto;font-size:16px; line-height:30px;}
+.experienceList{border-bottom: 1px solid #D8D8D8;}
+
+/*  今日计划 */
+.todayPlan, .planCompleted, .planNotCompleted, .rehabAssessment, rehabResult{margin:20px auto;}
+#plan{border-top: 1px solid #000; border-bottom: 1px solid #000; font-size: 14px; line-height:28px;}
+
+/* 康复评定效果 */
+
+.chartResult{margin:40px auto; text-align:center; font-size: 36px; color:#090;}
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../style/css/jquery-ui.min.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/jquery-ui.min.js"></script>
+<title>参数设置</title>
+<style type="text/css">
+@import url("../style/css/init.css");
+html { overflow-x: hidden; }
+.cent_planContent { width: 800px; height: 400px; border: 1px solid #CCC; border-radius:3px;}
+.cent_paramSetup { margin: 25px; width: 349px; height: 349px; float: left; }
+.cent_trainningMode { margin: 5px; width: 389px; height: 389px; float: right; border-left:1px solid #CCC; font-size:16px;}
+.cent_w350h175 { width: 349px; height: 175px; font-size: 16px; line-height: 60px;}
+.cent_lw120 { width: 120px; height: 200px; float: left; text-align: right; }
+.cent_rw195 { width: 215px; height: 200px; float: right; text-align: left; }
+div input{width:160px; height:30px; text-align:center; font-size:16px;}
+.radioStyle1 {width:160px; height:20px;}
+.radioStyle2 {width:40px; height:20px;}
+.trainningTypeSelect {margin:10px auto; width: 350px; height: 40px; float:left;}
+.trainningModeSelect {margin:25px; width: 340px; height: 110px; float:left;}
+.operateArea {width: 349px; height:50px; margin:10px; text-align:right; float:right;}
+select{width:200px; height:30px; line-height: 30px;font-size:16px; font-family:"微软雅黑"; color:#000;}
+#slider{width:200px; height:8px; background:#CCC;}
+.cent_patientRehabPlan { margin-top:10px; width:800px; height:auto; float: left;}
+.cent_patientRehabPlanList {width: 800px; height:346px; border: 1px solid #CCC; border-radius:3px; float:left;}
+#cent_rehabPlans {display:block; margin-top: 20px; border-top: 1px solid #000; border-bottom: 1px solid #000; font-size: 14px;line-height:30px;}
+</style>
+<script type="text/javascript" >
+	$(function(){
+		$("#trainningMode1, #trainningMode2").click(
+			function(){
+			if($("#trainningMode1").attr('checked')){
+			    $("#trainningSelect1").removeAttr("disabled");
+				$("#trainningSelect2").attr("disabled","disabled");
+			}else{
+				$("#trainningSelect1").attr("disabled","disabled");
+				$("#trainningSelect2").removeAttr("disabled");
+			}
+		}
+		);
+	$("#saveBtn").mouseleave(function(){
+		$(this).css('background',"#666");
+		});
+	$("#saveBtn").mousemove(function(){
+		$(this).css('background',"#090");
+		});
+	$("#slider").slider({ 
+	 value: 0,
+	 range: "min",
+      min: 0,
+      max: 10,
+	  slide: function( event, ui ) {
+        $( "#forceCount" ).val( ui.value );
+      }
+		});
+	$( "#forceCount" ).val( $( "#slider" ).slider( "value" ) );
+	});
+		
+</script>
+</head>
+
+<body>
+<div class="cent_planContent">
+<form action="#" method="post">
+  <div class="cent_paramSetup">
+    <div class="cent_w350h175">
+      <div class="cent_lw120"> 
+        训练时间：<br />
+        训练次数：<br />
+        每次时长：<br />
+      </div>
+      <div class="cent_rw195">
+        <input name="trainningDate"  type="text" value="2015-05-10 09:30" readonly="readonly" />&nbsp; <br />
+        <input name="trainningCount" type="number" value="3" /> 次<br />
+        <input name="timePer" type="number" value="20" /> 分钟<br />
+      </div>
+    </div>
+    <div class="cent_w350h175">
+    <!-- 提交的时候，被动训练提交 主动训练提交 助力/ 阻力 -->
+      <div class="trainningTypeSelect">
+      <input id="trainningType1" name="trainningType0" type="radio" class="radioStyle1" checked="checked"/> <label for="trainningType1">被动训练</label>
+      </div>
+       <div class="trainningTypeSelect">
+      <input id="trainningType2" name="trainningType0" type="radio" class="radioStyle1"/> <label for="trainningType2">主动训练</label>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="cent_trainningMode">
+  
+  <!-- 被动训练选择 -->
+ 	
+  	<div class="trainningModeSelect">
+     <input id="trainningMode1" name="trainningMode" type="radio" class="radioStyle2"/> <label for="trainningMode1">预定义动作</label>
+     <br /> <br />
+     <select id="trainningSelect1" disabled="disabled">
+     	<option>预定义被动训练动作1</option>
+        <option>预定义被动训练动作2</option>
+        <option>预定义被动训练动作3</option>
+     </select>
+    </div>
+    
+    <div class="trainningModeSelect">
+     <input id="trainningMode2" name="trainningMode" type="radio" class="radioStyle2" /> <label for="trainningMode2">自定义动作</label>
+      <br /> <br />
+      <select id="trainningSelect2" disabled="disabled">
+        <option>自定义被动训练动作1</option>
+        <option>自定义被动训练动作2</option>
+        <option>自定义被动训练动作3</option>
+     </select>
+    </div>
+    
+    
+    <!-- 主动训练选择 -->
+    <!--
+    <div class="trainningModeSelect" style="height:270px;">
+    	<input id="atrainningType1" name="trainningType" type="radio" class="radioStyle2"/> <label for="atrainningType1">助力训练</label> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="atrainningType2" name="trainningType" type="radio" class="radioStyle2"/> <label for="atrainningType2">阻力训练</label>
+        <br />
+        <br />
+      动作选择：  
+      <select>
+        <option>预定义助力训练动作1</option>
+        <option>预定义助力训练动作2</option>
+        <option>预定义助力训练动作3</option>
+     </select>
+     <br />
+     <br />
+     <p>
+  <label for="forceCount">施力大小:</label>
+  <input type="text" id="forceCount" readonly style="border:0; width:40px; color:#090; font-weight:bold;">
+   </p>
+   <br/>
+     <div id="slider"></div>
+     <br />
+     <p>
+     <label for="forceValue">施力强度：</label>
+      <input type="text" id="forceValue" readonly style="border:0; width:40px; color:#090; font-weight:bold;">
+     </p>
+     <br />
+     <input id="smallForce" type="radio" name="forceRange" class="radioStyle2" /> <label for="smallForce">小</label>&nbsp;&nbsp;
+     <input id="mediumForce" type="radio" name="forceRange" class="radioStyle2"/> <label for="mediumForce">中</label>&nbsp;&nbsp;
+     <input id="largeForce" type="radio" name="forceRange" class="radioStyle2" /> <label for="largeForce">大</label>&nbsp;&nbsp;
+    </div>
+    -->
+    
+    <div class="operateArea">
+    	<input id="saveBtn" type="submit" value="保存修改" style="width:80px; font-family:'微软雅黑';cursor:pointer; background:#666; color:#FFF; border: none; border-radius:2px;"/>
+    </div>
+  </div>
+  </form>
+</div>
+ <div class="cent_patientRehabPlan">
+    <span style="display:block; float:left; width:800px; font-size:18px; height: 40px;">患者一周计划</span>
+    <div class="cent_patientRehabPlanList">
+ <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="cent_rehabPlans">
+      <tr>
+        <th width="20%" scope="col">训练时间</th>
+        <th width="10%" scope="col">训练类型</th>
+        <th width="20%" scope="col">训练次数/每次时长(min)</th>
+        <th width="20%" scope="col">动作名称</th>
+        <th width="10%" scope="col">施力大小</th>
+        <th width="10%" scope="col">施力强度</th>
+        <th width="10%" scope="col">完成情况</th>
+      </tr>
+       <tr style="border-top: 1px solid #999; background-color:#CCC;">
+        <td>2015-05-10 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-11 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-12 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-13 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-14 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-15 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>2015-05-16 09:30</td>
+        <td>助力训练</td>
+        <td>3 / 20</td>
+        <td>预定义助力训练动作1</td>
+        <td>2</td>
+        <td>小</td>
+        <td>未完成</td>
+      </tr>
+    </table>
+    </div>
+    </div>
+</body>
+</html>

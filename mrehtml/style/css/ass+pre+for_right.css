@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+.rightSide { width: 900px; height: 1000px;}
+.rightList { width: 900px; height: 850px; margin: 10px auto; }
+.rightList ul li { diplay: block; width: 870px; height: 20px; padding: 10px; font-size: 14px; line-height: 20px; border-bottom: 1px dashed #CCC; float: left; }
+.rightList ul li span { display: block; float: right; }

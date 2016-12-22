@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/patientCenter.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/welcome.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/jquery.jqplot.min.css"/>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/patientCenter.js"></script>
+<script type="text/javascript" src="../script/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="../script/jqplot.canvasAxisLabelRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.canvasTextRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.dateAxisRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.canvasAxisTickRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.barRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.categoryAxisRenderer.js"></script>
+<script type="text/javascript" src="../script/jqplot.cursor.js"></script>
+<script type="text/javascript" src="../script/jqplot.highlighter.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#rehabResult").addClass('li_checked');	
+	/*  折线图的设置 */	
+	var line = [['2014/2/1', 15],['2014/3/1', 20],['2014/4/1', 30],];			
+	$.jqplot('chart', [line], {
+			title: {
+				text: '康复训练效果图', // 图表主题
+				fontFamily: '微软雅黑',
+				fontSize: '18px',
+				textColor: 'black'
+				},
+			series:[{
+				//renderer:$.jqplot.BarRenderer // 使用柱状图渲染
+				lineWidth:4, 
+				}], 
+			axesDefaults: {
+				tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+				
+				/*tickOptions:{
+						angle: -15,
+						fontSize: '10pt'
+					}*/
+				labelOptions:{
+					fontSize: '16px',
+					fontFamily:'微软雅黑'
+					}
+				},
+				axes:{
+					xaxis:{
+						label: "训练时间", // 指定X轴的说明文字
+						//renderer: $.jqplot.CategoryAxisRenderer   // 指定X坐标为string
+						renderer: $.jqplot.DateAxisRenderer,
+						tickOptions:{formatString: '%Y-%m-%d'},
+						tickInterval: '15 days'                    // 时间间隔
+						}, 
+					yaxis:{
+						label: "Fugel-Meyer评分" // 指定Y轴的说明文字
+						}
+					},
+				highlighter:{
+					show: true,
+					sizeAdjust: 7.5
+				},
+				cursor:{
+					show:false
+					}
+		});
+		});
+</script>
+
+<title>折线图</title>
+<title>康复训练效果</title>
+</head>
+
+<body>
+<div class="rightSide">
+  <div class="centerTitle">康复状况 &gt; 康复训练效果</div>
+  <!-- 康复训练效果 -->
+  <!-- 由康复评定的结果进行绘图说明 --> 
+  <div class="rehabResult">
+  	<div id="chart" style="width:600px; height:300px; margin: 20px auto"></div>
+    <div class="chartResult">
+    	恭喜！ 您的康复训练效果良好！
+    </div>
+</div>
+</div>
+</body>
+</html>

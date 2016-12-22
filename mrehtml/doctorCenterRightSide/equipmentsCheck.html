@@ -1,0 +1,34 @@
+\<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/doctorCenter.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/doctorCenter.js"></script>
+<title>设备控制</title>
+</head>
+
+<body>
+<div class="rightSide">
+  	<div class="centerTitle">设备管理 &gt; 设备测试</div>
+    <!-- 这里是用来做检查故障的试用的 -->
+    <!-- 使用select 下拉框来选择设备 -->
+    
+    <div class="equipmentsCheck">
+    设备选择：
+    <select id="equipmentsList" name="equipmentChecked">
+    	<option>Centrobot 上肢康复机器人</option>
+        <option>Armeo Spring 上肢康复机器人</option>
+        <option>"康为"手功能训练设备</option>
+    </select>
+    &nbsp; &nbsp; &nbsp; 
+    <button id="connect" name="connect" class="abledBtn" >连接</button>
+    &nbsp; &nbsp; &nbsp; 
+    <button id="check" name="check" class="disabledBtn" disabled="disabled">测试</button>
+    &nbsp; &nbsp; &nbsp; 
+    <button id="stop" name="stop" class="disabledBtn" disabled="disabled">停止</button>
+    </div>
+</div>
+</body>
+</html>

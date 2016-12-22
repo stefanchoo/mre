@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/css/init.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/equipmentsCss/centrobot.css" />
+<link rel="stylesheet" type="text/css" href="../style/css/login.css" />
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/centrobot.js" ></script>
+<title>Centrobot上肢康复训练系统 - 设备调试</title>
+<script type="text/javascript">
+	$(function(){
+		$("#cent_equipmentCheck").addClass("navi_checked");	
+		});
+</script>
+</head>
+<!--  SSH + jFreeChart画图 -->
+<!-- SSH + highcharts + jQuery -->
+<body>
+  
+<!-- 首页 -->
+<div id="topPage" class="topPage">
+  <div class="topDiv">
+    <div> <img src="../style/images/logo.png" class="logo"/> </div>
+    <div class="slogan">康复设备医疗网络平台，与您携手共度康复生活</div>
+    <div class="login"> <span class="welcome">您好！</span> &nbsp;<a href="#"><span id="loginName" class="loginName">stefanchoo </span></a> <a href="#" target="_blank" class="userMsg"><span id="userMsg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0)</span></a> &nbsp;|&nbsp; <a href="../index.html" class="exit">退出</a> </div>
+  </div>
+</div>
+
+<!-- 设置居中 放大缩小时，始终处于中间位置-->
+<div class="bodyPage">
+
+<!-- BannerPage -->
+<div class="centrobotBannerPage">
+    <div class="centrobotLogo"> <img src="../style/images/centrobot/logo.png" width="250px" height="80px"/></div>
+    <!--  -->
+    <div class="centrobotNavi">
+    	<ul id="firstNavi">
+        	<li id="cent_index" onclick="javascript: window.location.href='centrobotIndex.html';">首 页</li>
+            <li id="cent_patientsList" onclick="javascript: window.location.href='centrobotPatientsList.html';">患者列表</li>
+            <li id="cent_makePlans" onclick="javascript: window.location.href='centrobotMakePlans.html';">计划定制</li>
+            <li id="cent_rehabTrainning" onclick="javascript: window.location.href='centrobotRehabTrainning.html';">康复训练
+            	<ul id="secondNavi">
+                <li>运动训练</li>
+                <li>游戏训练</li>
+                </ul>
+            </li>
+            <li id="cent_equipmentCheck" onclick="javascript: window.location.href='centrobotEquipmentCheck.html';">设备调试</li>
+            <li id="cent_help" onclick="javascript: window.location.href='centrobotHelp.html';">使用帮助</li>         
+        </ul>
+    </div>
+    <div class="centrobotStatus">
+    	<div class="blank_h40">连接状态</div>
+        <div class="blank_h40"><img id="centrobotConnect" title="点击连接" style="cursor:pointer;" src="../style/images/centrobot/off.jpg" width="65px" height="39px"/></div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+ 

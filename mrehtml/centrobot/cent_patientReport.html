@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>病人报告</title>
+<style type="text/css">
+@import url("../style/css/init.css");
+html { overflow-x:hidden;}
+.cent_reportSelect{margin:20px; width: 760px; height: 50px; float:left; font-size:16px; border-bottom: 1px dashed #CCCCCC;}
+select{width:200px; height:30px; line-height: 30px;font-size:16px; font-family:"微软雅黑"; color:#000;}
+.cent_patientReport {width: 800px; height:auto; font-size:16px;}
+.cent_patientReport p{text-indent:2em;}
+#cent_trainningResult{border-top: 1px solid #000; border-bottom: 1px solid #000; font-size: 14px; line-height:28px;}
+</style>
+
+</head>
+
+<body>
+<div class="cent_reportSelect">
+<strong>计划选择：</strong>
+	<select>
+		<option>2015-05-01 被动训练</option>  
+        <option>2015-05-03 被动训练</option>  
+        <option>2015-05-05 助力训练</option>
+    </select>
+</div>
+<div class="cent_patientReport">
+	<center><h2 style="font-size:20px;">Centrobot上肢康复机器人训练报告</h2></center>
+    <br /><br />
+    <p>病历号： <span style="text-decoration:underline;"> 1001 </span></p>
+    <br />
+    <p>康复医师： <span style="text-decoration:underline;"> 朱沪生 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       训练日期： <span style="text-decoration:underline;"> 2015-05-01 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       打印日期： <span style="text-decoration:underline;"> 2015-05-01 </span>
+    </p>
+    <br />
+    <p>患者姓名：<span style="text-decoration:underline;"> 张三 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       性别： <span style="text-decoration:underline;"> 男 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       年龄： <span style="text-decoration:underline;"> 50 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       临床诊断： <span style="text-decoration:underline;"> 脑瘁中 </span>
+    </p>
+    <br />
+    <p style="font-weight:bold">训练效果</p>
+    <br />
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="cent_trainningResult">
+      <tr>
+        <th width="20%" scope="col">训练类型</th>
+        <th width="30%" scope="col">训练次数/每次用时(min)</th>
+        <th width="15%" scope="col">开始时间</th>
+        <!-- 这里其实还应该包括训练次数 -->
+        <th width="15%" scope="col">结束时间</th>
+        <th width="20%" scope="col">效果</th>
+      </tr>
+       <tr style="border-top: 1px solid #999;">
+        <td>被动训练</td>
+        <td>3 / 20</td>
+        <td>09:30</td>
+        <td>10:50</td>
+        <td>良好</td>
+      </tr>
+    </table>
+    <br />
+    <p style="font-weight:bold">训练曲线图</p>
+</div>
+</div>
+</body>
+</html>
